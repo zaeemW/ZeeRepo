@@ -1,17 +1,8 @@
-trigger:
-- main  # Runs when code is pushed to the main branch
-
-pool:
-  vmImage: 'windows-latest'  # Use Microsoft-hosted Windows agent
-
 steps:
 - task: PowerShell@2
-  displayName: 'Install Az.Storage Module'
+  displayName: 'Check Default Az Module'
   inputs:
     targetType: 'inline'
     script: |
-      # Install the Az.Storage module
-      Install-Module -Name Az.Storage -Force -AllowClobber -Scope CurrentUser
-
-      # Verify installation
-      Get-Module -ListAvailable -Name Az.Storage
+      # List installed Az module and its version
+      Get-Module -ListAvailable -Name Az*
