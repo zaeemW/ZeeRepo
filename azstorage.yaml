@@ -1,4 +1,8 @@
+pool:
+  vmImage: 'windows-latest'
+
 steps:
+
 - task: PowerShell@2
   displayName: 'Check Default Az Module'
   inputs:
