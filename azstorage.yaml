@@ -9,4 +9,4 @@ steps:
     targetType: 'inline'
     script: |
       # List installed Az module and its version
-      Get-Module -ListAvailable -Name Az*
+      Get-Module -ListAvailable -Name Az.*
